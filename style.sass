@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap')
+
+// Fonts
+$fontFamily: 'Space Mono', monospace
+$fontSize: 16px
+
+// Colors
+$cyan: hsl(172, 67%, 45%)
+$darkCyan: hsl(183, 100%, 15%)
+$grayCyanDark1: hsl(172, 67%, 45%)
+$grayCyanDark2: hsl(184, 14%, 56%)
+$grayCyanLight1: hsl(185, 41%, 84%)
+$grayCyanLight2: hsl(189, 41%, 97%)
+
+// Setup
+*, *::before, *::after
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+
+html
+    font-family: $fontFamily
+    font-size: $fontSize
+    background-color: $grayCyanLight1
+
+// Calculator
+
+.container
+    min-height: 100vh
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+
+.logo
+    margin: 3em 0
+
+.calculator-container
+    background-color: white
+    padding: 1.5em
+    border-radius: 15px
+    max-width: 30rem
+
+.input-section
+    margin-bottom: 2em
+
+.caption
+    color: $grayCyanDark2
+    font-size: 1rem
+    padding: 2em 0 .5em
+    &:first-child
+        padding-top: 0
+
+
+.calculator-input
+    font-size: 1.5rem
+    font-family: inherit
+    font-weight: bold
+    color: $darkCyan
+    text-align: right
+    padding: .3rem 0
+    border: 2px solid $grayCyanLight2
+    background-color: $grayCyanLight2
+    width: 100%
+    border-radius: 5px
+    cursor: pointer
+    &:hover
+        border: 2px solid $grayCyanLight1
+    &:focus
+        outline: none
+        border: 2px solid $grayCyanDark1
+
+#bill-input
+    background-image: url('./images/icon-dollar.svg')
+    background-repeat: no-repeat
+    background-position: left 1em top 50%
+
+.tip-percentages
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-gap: 1em 1em
+
+.percent-btn
+    border: none
+    padding: .3rem
+    border-radius: 5px
+    background-color: $darkCyan
+    color: white
+    font-size: 1.5rem
+    font-weight: bold
+    font-family: inherit
+    cursor: pointer
+    &:hover
+        background-color: $grayCyanLight1
+        color: $darkCyan
+
+.active-btn
+    color: $darkCyan
+    background-color: $grayCyanDark1
+
+#custom-tip-input.active-tip
+    border: 2px solid $darkCyan
+
+#people-input
+    background-image: url('./images/icon-person.svg')
+    background-repeat: no-repeat
+    background-position: left 1em top 50%
+
+.output-section
+    background-color: $darkCyan
+    padding: 1.5em
+    border-radius: 15px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+.output-row
+    display: flex
+    justify-content: space-between
+    padding: 1rem 0
+
+.output-caption
+    color: white
+    line-height: 1.2rem
+
+.per-person
+    font-size: small
+    color: $grayCyanDark1
+
+.output-value
+    color: $grayCyanDark1
+    font-size: 2rem
+    font-weight: bold
+
+.reset-btn
+    color: $darkCyan
+    font-size: 1.2rem
+    font-weight: bold
+    text-transform: uppercase
+    background-color: $grayCyanDark1
+    border: none
+    border-radius: 5px
+    padding: .8rem
+    margin-top: 1.5rem
+    cursor: pointer
+    &:hover
+        background-color: $grayCyanLight1
+    &:disabled
+        opacity: .2
+        cursor: default
+
+.attribution
+    font-size: 11px
+    text-align: center
+    margin-top: 3em
+    a
+        color: hsl(228, 45%, 24%)
+
+
+@media screen and ( min-width: 50rem )
+    .calculator-container
+        max-width: 50rem
+        display: grid
+        grid-template-columns: 1fr 1fr
+        grid-column-gap: 2rem
+
+    .tip-percentages
+        grid-template-columns: 1fr 1fr 1fr
+    

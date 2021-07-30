@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: "Space Mono", monospace;
+  font-size: 16px;
+  background-color: #c5e4e7;
+}
+
+.container {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.logo {
+  margin: 3em 0;
+}
+
+.calculator-container {
+  background-color: white;
+  padding: 1.5em;
+  border-radius: 15px;
+  max-width: 30rem;
+}
+
+.input-section {
+  margin-bottom: 2em;
+}
+
+.caption {
+  color: #7f9c9f;
+  font-size: 1rem;
+  padding: 2em 0 .5em;
+}
+
+.caption:first-child {
+  padding-top: 0;
+}
+
+.calculator-input {
+  font-size: 1.5rem;
+  font-family: inherit;
+  font-weight: bold;
+  color: #00494d;
+  text-align: right;
+  padding: .3rem 0;
+  border: 2px solid #f4fafa;
+  background-color: #f4fafa;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.calculator-input:hover {
+  border: 2px solid #c5e4e7;
+}
+
+.calculator-input:focus {
+  outline: none;
+  border: 2px solid #26c0ab;
+}
+
+#bill-input {
+  background-image: url("./images/icon-dollar.svg");
+  background-repeat: no-repeat;
+  background-position: left 1em top 50%;
+}
+
+.tip-percentages {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-gap: 1em 1em;
+}
+
+.percent-btn {
+  border: none;
+  padding: .3rem;
+  border-radius: 5px;
+  background-color: #00494d;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.percent-btn:hover {
+  background-color: #c5e4e7;
+  color: #00494d;
+}
+
+.active-btn {
+  color: #00494d;
+  background-color: #26c0ab;
+}
+
+#custom-tip-input.active-tip {
+  border: 2px solid #00494d;
+}
+
+#people-input {
+  background-image: url("./images/icon-person.svg");
+  background-repeat: no-repeat;
+  background-position: left 1em top 50%;
+}
+
+.output-section {
+  background-color: #00494d;
+  padding: 1.5em;
+  border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.output-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.output-caption {
+  color: white;
+  line-height: 1.2rem;
+}
+
+.per-person {
+  font-size: small;
+  color: #26c0ab;
+}
+
+.output-value {
+  color: #26c0ab;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.reset-btn {
+  color: #00494d;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #26c0ab;
+  border: none;
+  border-radius: 5px;
+  padding: .8rem;
+  margin-top: 1.5rem;
+  cursor: pointer;
+}
+
+.reset-btn:hover {
+  background-color: #c5e4e7;
+}
+
+.reset-btn:disabled {
+  opacity: .2;
+  cursor: default;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 3em;
+}
+
+.attribution a {
+  color: #222d59;
+}
+
+@media screen and (min-width: 50rem) {
+  .calculator-container {
+    max-width: 50rem;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    grid-column-gap: 2rem;
+  }
+  .tip-percentages {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+/*# sourceMappingURL=style.css.map */
