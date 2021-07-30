@@ -47,11 +47,11 @@ html {
 .caption {
   color: #7f9c9f;
   font-size: 1rem;
-  padding: 2em 0 .5em;
+  margin: 2em 0 .5em;
 }
 
-.caption:first-child {
-  padding-top: 0;
+label:first-child .caption {
+  margin-top: 0;
 }
 
 .calculator-input {
