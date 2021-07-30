@@ -50,7 +50,7 @@ html {
   margin: 2em 0 .5em;
 }
 
-label:first-child .caption {
+.caption:first-child {
   margin-top: 0;
 }
 
@@ -206,6 +206,9 @@ label:first-child .caption {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
     grid-column-gap: 2rem;
+  }
+  .input-section {
+    margin-bottom: 0;
   }
   .tip-percentages {
     -ms-grid-columns: 1fr 1fr 1fr;
