@@ -19,16 +19,16 @@
     </header>
     <main class="calculator-container">
       <section class="input-section">
-        <h2 class="caption">Bill</h2>
+        <label for="bill-input"><h2 class="caption">Bill</h2></label>
         <input type="number" step="0.01" placeholder="0" min="0" class="calculator-input" name="bill-input" id="bill-input">
 
         <h2 class="caption">Select Tip %</h2>
         <div class="tip-percentages">
-          <button role="button" class="percent-btn">5%</button>
-          <button role="button" class="percent-btn">10%</button>
-          <button role="button" class="percent-btn">15%</button>
-          <button role="button" class="percent-btn">25%</button>
-          <button role="button" class="percent-btn">50%</button>
+          <button class="percent-btn">5%</button>
+          <button class="percent-btn">10%</button>
+          <button class="percent-btn">15%</button>
+          <button class="percent-btn">25%</button>
+          <button class="percent-btn">50%</button>
           <input type="number" step="1" class="calculator-input" placeholder="Custom" min="1" id="custom-tip-input">
         </div>
 
@@ -39,21 +39,21 @@
       <section class="output-section">
         <div class="outputs">
           <div class="output-row">
-            <p class="output-caption">
+            <h2 class="output-caption">
               Tip Amount <br>
               <span class="per-person">/ person</span>
-            </p>
+            </h2>
             <div id="tip-value" class="output-value">$0.00</div>
           </div>
           <div class="output-row">
-            <p class="output-caption">
+            <h2 class="output-caption">
               Total <br>
               <span class="per-person">/ person</span>
-            </p>
+            </h2>
             <div id="total-value" class="output-value">$0.00</div>
           </div>
         </div>
-        <button role="button" disabled class="reset-btn">Reset</button>
+        <button disabled class="reset-btn">Reset</button>
       </section>
     </main>
     <footer class="attribution">
